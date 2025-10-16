@@ -176,7 +176,7 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 pb-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
             <Card className="p-6 text-center bg-white/95 backdrop-blur-sm hover:scale-105 transition-transform">
-              <div className="text-4xl font-bold text-primary mb-2">15</div>
+              <div className="text-4xl font-bold text-primary mb-2">7</div>
               <div className="text-sm text-muted-foreground">Побед в сезоне</div>
             </Card>
             <Card className="p-6 text-center bg-white/95 backdrop-blur-sm hover:scale-105 transition-transform">
