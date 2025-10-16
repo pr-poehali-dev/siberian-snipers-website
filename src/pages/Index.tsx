@@ -421,18 +421,24 @@ const Index = () => {
                 </p>
               </Card>
               
-              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all">
+              <Card 
+                className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer"
+                onClick={() => window.open('https://t.me/ggrzk', '_blank')}
+              >
                 <Icon name="Send" size={40} className="mx-auto mb-4 text-secondary" />
                 <h3 className="text-xl font-bold mb-2 text-primary-foreground">Telegram</h3>
-                <p className="text-sm text-primary-foreground/80">
+                <p className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors">
                   t.me/ggrzk
                 </p>
               </Card>
               
-              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all">
+              <Card 
+                className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer"
+                onClick={() => window.open('https://t.me/sibsniper', '_blank')}
+              >
                 <Icon name="Send" size={40} className="mx-auto mb-4 text-secondary" />
                 <h3 className="text-xl font-bold mb-2 text-primary-foreground">Telegram</h3>
-                <p className="text-sm text-primary-foreground/80">
+                <p className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors">
                   t.me/sibsniper
                 </p>
               </Card>
