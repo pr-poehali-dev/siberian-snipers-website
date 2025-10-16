@@ -141,8 +141,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                <span className="text-2xl">🏒</span>
+              <div className="w-14 h-14 flex items-center justify-center">
+                <img 
+                  src="https://cdn.poehali.dev/files/86cfed68-bd2b-4ec3-8227-4741dc917e56.png" 
+                  alt="Сибирские Снайперы" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground">
@@ -176,7 +180,7 @@ const Index = () => {
       <section id="home" className="pt-20 min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.poehali.dev/projects/80b3ddd5-d6c4-415a-81f6-f3125419507b/files/000730a4-8459-49fa-b1b8-3b395049966d.jpg"
+            src="https://cdn.poehali.dev/projects/80b3ddd5-d6c4-415a-81f6-f3125419507b/files/fb87b806-15aa-43c2-b798-2d01d566a95b.jpg"
             alt="Игрок Сибирских Снайперов"
             className="w-full h-full object-cover opacity-40"
           />
