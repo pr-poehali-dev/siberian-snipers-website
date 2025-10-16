@@ -91,12 +91,16 @@ const Index = () => {
   ];
 
   const team = [
-    { number: 17, name: 'Александр Петров', position: 'Нападающий' },
-    { number: 91, name: 'Дмитрий Соколов', position: 'Нападающий' },
-    { number: 23, name: 'Максим Иванов', position: 'Защитник' },
-    { number: 44, name: 'Сергей Волков', position: 'Защитник' },
-    { number: 1, name: 'Игорь Смирнов', position: 'Вратарь' },
-    { number: 30, name: 'Андрей Козлов', position: 'Вратарь' },
+    { number: 12, name: 'hellebuck', position: 'Вратарь', captain: 'C' },
+    { number: 86, name: 'Nykroy', position: 'Нападающий', captain: 'C' },
+    { number: 17, name: 'MarcussGogolev🇷🇺', position: 'Защитник' },
+    { number: 20, name: 'Лысый', position: 'Нападающий' },
+    { number: 71, name: 'Celibrini', position: 'Нападающий' },
+    { number: 74, name: 'FishyXXL', position: 'Защитник' },
+    { number: 79, name: 'SigmaKriper', position: 'Нападающий' },
+    { number: 90, name: 'TKACHEV', position: 'Защитник', note: 'В аренде СКА-1946' },
+    { number: 91, name: 'Dangel', position: 'Защитник', note: 'В аренде СКА-1946' },
+    { number: 95, name: 'Galimov', position: 'Нападающий', note: 'В аренде Локо' },
   ];
 
   const partners = [
@@ -364,14 +368,22 @@ const Index = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center relative">
                     <span className="text-3xl font-bold text-primary-foreground">
                       {player.number}
                     </span>
+                    {player.captain && (
+                      <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center text-xs font-bold">
+                        {player.captain}
+                      </span>
+                    )}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-xl font-bold text-primary mb-1">{player.name}</h3>
                     <p className="text-sm text-muted-foreground">{player.position}</p>
+                    {player.note && (
+                      <p className="text-xs text-secondary mt-1 italic">{player.note}</p>
+                    )}
                   </div>
                 </div>
               </Card>
