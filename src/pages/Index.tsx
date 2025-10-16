@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [timeToGame, setTimeToGame] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const navItems = [
     { id: 'home', label: 'Главная', icon: 'Home' },
@@ -105,6 +106,26 @@ const Index = () => {
     { name: 'Северсталь', logo: '🏭' },
   ];
 
+  useEffect(() => {
+    const calculateTimeToGame = () => {
+      const nextGame = new Date('2024-10-18T14:00:00');
+      const now = new Date();
+      const diff = nextGame.getTime() - now.getTime();
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        setTimeToGame({ days, hours, minutes, seconds });
+      }
+    };
+
+    calculateTimeToGame();
+    const interval = setInterval(calculateTimeToGame, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
@@ -172,6 +193,33 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
               Профессиональная молодёжная хоккейная команда из Сибири. Точность. Сила. Победа.
             </p>
+            
+            <Card className="bg-white/95 backdrop-blur-sm p-6 mb-8 max-w-2xl">
+              <div className="text-center">
+                <div className="text-sm text-muted-foreground mb-2 flex items-center justify-center gap-2">
+                  <Icon name="Clock" size={16} />
+                  До ближайшего матча против Мамонты Югры
+                </div>
+                <div className="grid grid-cols-4 gap-4">
+                  <div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary">{timeToGame.days}</div>
+                    <div className="text-xs text-muted-foreground">дней</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary">{timeToGame.hours}</div>
+                    <div className="text-xs text-muted-foreground">часов</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary">{timeToGame.minutes}</div>
+                    <div className="text-xs text-muted-foreground">минут</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary">{timeToGame.seconds}</div>
+                    <div className="text-xs text-muted-foreground">секунд</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
             <div className="flex flex-wrap gap-4">
               <Button
                 size="lg"
