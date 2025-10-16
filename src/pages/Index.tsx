@@ -100,10 +100,7 @@ const Index = () => {
   ];
 
   const partners = [
-    { name: 'Газпром', logo: '🏢' },
-    { name: 'Сибур', logo: '⚡' },
-    { name: 'РЖД', logo: '🚄' },
-    { name: 'Северсталь', logo: '🏭' },
+    { name: 'Фанатский VFHL', logo: '🏒' },
   ];
 
   useEffect(() => {
@@ -147,7 +144,7 @@ const Index = () => {
                 <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground">
                   Сибирские Снайперы
                 </h1>
-                <p className="text-xs text-primary-foreground/70">МХЛ</p>
+                <p className="text-xs text-primary-foreground/70">VFHL</p>
               </div>
             </div>
             <div className="hidden md:flex gap-6">
@@ -185,7 +182,7 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-32">
           <div className="max-w-4xl animate-fade-in">
             <Badge className="mb-6 bg-secondary text-secondary-foreground text-sm px-4 py-2">
-              МХЛ • Сезон 2024/2025
+              VFHL • Сезон 2024/2025
             </Badge>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               СИБИРСКИЕ<br />СНАЙПЕРЫ
@@ -425,20 +422,18 @@ const Index = () => {
               </Card>
               
               <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all">
-                <Icon name="Phone" size={40} className="mx-auto mb-4 text-secondary" />
-                <h3 className="text-xl font-bold mb-2 text-primary-foreground">Телефон</h3>
+                <Icon name="Send" size={40} className="mx-auto mb-4 text-secondary" />
+                <h3 className="text-xl font-bold mb-2 text-primary-foreground">Telegram</h3>
                 <p className="text-sm text-primary-foreground/80">
-                  +7 (383) 123-45-67<br />
-                  Пн-Пт: 9:00 - 18:00
+                  t.me/ggrzk
                 </p>
               </Card>
               
               <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all">
-                <Icon name="Mail" size={40} className="mx-auto mb-4 text-secondary" />
-                <h3 className="text-xl font-bold mb-2 text-primary-foreground">Email</h3>
+                <Icon name="Send" size={40} className="mx-auto mb-4 text-secondary" />
+                <h3 className="text-xl font-bold mb-2 text-primary-foreground">Telegram</h3>
                 <p className="text-sm text-primary-foreground/80">
-                  info@siberiansnippers.ru<br />
-                  press@siberiansnippers.ru
+                  t.me/sibsniper
                 </p>
               </Card>
             </div>
