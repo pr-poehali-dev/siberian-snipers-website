@@ -105,7 +105,6 @@ const Index = () => {
 
   const partners = [
     { name: 'Фанатский VFHL', logo: 'https://cdn.poehali.dev/files/214fb34f-c1ed-45f6-8f90-567fe49cec21.png' },
-    { name: 'VFHL', logo: 'https://cdn.poehali.dev/files/85af49c5-ca71-4b78-9dc6-bb7829bf48e3.png' },
   ];
 
   useEffect(() => {
@@ -404,7 +403,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground">Они поддерживают нашу команду</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="flex justify-center">
             {partners.map((partner, index) => (
               <Card
                 key={index}
