@@ -104,7 +104,7 @@ const Index = () => {
   ];
 
   const partners = [
-    { name: 'Фанатский VFHL', logo: '🏒' },
+    { name: 'Фанатский VFHL', logo: 'https://cdn.poehali.dev/files/214fb34f-c1ed-45f6-8f90-567fe49cec21.png' },
   ];
 
   useEffect(() => {
@@ -410,7 +410,9 @@ const Index = () => {
                 className="p-8 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-5xl mb-4">{partner.logo}</div>
+                <div className="w-24 h-24 mb-4 flex items-center justify-center">
+                  <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain" />
+                </div>
                 <div className="text-sm font-medium text-center">{partner.name}</div>
               </Card>
             ))}
