@@ -186,7 +186,7 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-32">
           <div className="max-w-4xl animate-fade-in">
             <Badge className="mb-6 bg-secondary text-secondary-foreground text-sm px-4 py-2">
-              VFHL • Сезон 2024/2025
+              VFHL • Сезон 25/26
             </Badge>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               СИБИРСКИЕ<br />СНАЙПЕРЫ
@@ -269,7 +269,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-4">Расписание</h2>
-            <p className="text-lg text-muted-foreground">Ближайшие матчи сезона 2024/2025</p>
+            <p className="text-lg text-muted-foreground">Ближайшие матчи сезона 25/26</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
