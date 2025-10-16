@@ -93,8 +93,8 @@ const Index = () => {
   const team = [
     { number: 12, name: 'hellebuck', position: 'Вратарь', captain: 'C' },
     { number: 86, name: 'Nykroy', position: 'Нападающий', captain: 'C' },
-    { number: 17, name: 'MarcussGogolev🇷🇺', position: 'Защитник' },
-    { number: 20, name: 'Лысый', position: 'Нападающий' },
+    { number: 17, name: 'MarcussGogolev🇷🇺', position: 'Защитник', captain: 'A' },
+    { number: 20, name: 'Лысый', position: 'Нападающий', captain: 'A' },
     { number: 71, name: 'Celibrini', position: 'Нападающий' },
     { number: 74, name: 'FishyXXL', position: 'Защитник' },
     { number: 79, name: 'SigmaKriper', position: 'Нападающий' },
