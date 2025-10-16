@@ -18,31 +18,52 @@ const Index = () => {
 
   const games = [
     {
-      date: '2024-10-20',
-      opponent: 'Тюменский Легион',
+      date: '2024-10-18',
+      opponent: 'Мамонты Югры',
       location: 'Домашний матч',
-      time: '19:00',
+      time: '14:00',
       status: 'upcoming'
     },
     {
-      date: '2024-10-25',
+      date: '2024-10-18',
       opponent: 'Омские Ястребы',
       location: 'Выездной матч',
       time: '18:30',
       status: 'upcoming'
     },
     {
-      date: '2024-11-01',
-      opponent: 'Кузнецкие Медведи',
+      date: '2024-10-21',
+      opponent: 'МХК Спартак',
       location: 'Домашний матч',
-      time: '19:00',
+      time: '16:00',
       status: 'upcoming'
     },
     {
-      date: '2024-11-08',
-      opponent: 'Алтай Торпедо',
+      date: '2024-10-22',
+      opponent: 'Белые Медведи',
       location: 'Выездной матч',
-      time: '17:00',
+      time: '16:30',
+      status: 'upcoming'
+    },
+    {
+      date: '2024-10-26',
+      opponent: 'Толпар',
+      location: 'Домашний матч',
+      time: '18:30',
+      status: 'upcoming'
+    },
+    {
+      date: '2024-10-28',
+      opponent: 'Динамо СПБ',
+      location: 'Выездной матч',
+      time: '17:30',
+      status: 'upcoming'
+    },
+    {
+      date: '2024-10-30',
+      opponent: 'Крылья Советов',
+      location: 'Домашний матч',
+      time: '18:00',
       status: 'upcoming'
     }
   ];
@@ -50,21 +71,21 @@ const Index = () => {
   const news = [
     {
       id: 1,
-      title: 'Победа в овертайме против Тюменского Легиона',
+      title: 'Сибирским снайперам исполняется 1 месяц!',
       date: '2024-10-15',
-      excerpt: 'Драматичный матч завершился со счётом 4:3 в пользу Сибирских Снайперов'
+      excerpt: 'Наша команда празднует первый месяц с момента создания клуба'
     },
     {
       id: 2,
-      title: 'Новичок месяца - Александр Петров',
-      date: '2024-10-12',
-      excerpt: 'Молодой нападающий показывает отличные результаты в первом сезоне'
+      title: 'Игроки уезжают в аренду',
+      date: '2024-10-14',
+      excerpt: '#95 Galimov, #71 rundya, #90 Dangel уезжают в аренду, #71 и #90 в СКА-1946, #95 в Толпар!'
     },
     {
       id: 3,
-      title: 'Старт продаж абонементов на новый сезон',
-      date: '2024-10-10',
-      excerpt: 'Специальные условия для болельщиков при покупке до конца месяца'
+      title: 'Сибирские снайперы вновь выиграли в сезоне',
+      date: '2024-10-12',
+      excerpt: 'Одержали победу над "Локомотив"'
     }
   ];
 
@@ -184,11 +205,11 @@ const Index = () => {
               <div className="text-sm text-muted-foreground">Место в лиге</div>
             </Card>
             <Card className="p-6 text-center bg-white/95 backdrop-blur-sm hover:scale-105 transition-transform">
-              <div className="text-4xl font-bold text-primary mb-2">72</div>
+              <div className="text-4xl font-bold text-primary mb-2">24</div>
               <div className="text-sm text-muted-foreground">Забитых шайб</div>
             </Card>
             <Card className="p-6 text-center bg-white/95 backdrop-blur-sm hover:scale-105 transition-transform">
-              <div className="text-4xl font-bold text-primary mb-2">89%</div>
+              <div className="text-4xl font-bold text-primary mb-2">74%</div>
               <div className="text-sm text-muted-foreground">Успех бросков</div>
             </Card>
           </div>
@@ -228,7 +249,10 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                <Button 
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                  onClick={() => window.open('https://www.donationalerts.com/r/sibsniper', '_blank')}
+                >
                   Купить билеты
                   <Icon name="ExternalLink" size={16} className="ml-2" />
                 </Button>
