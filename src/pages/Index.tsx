@@ -176,8 +176,8 @@ const Index = () => {
       <section id="home" className="pt-20 min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.poehali.dev/projects/80b3ddd5-d6c4-415a-81f6-f3125419507b/files/d04836c5-1906-483c-9fe3-87a9c2573215.jpg"
-            alt="Hero"
+            src="https://cdn.poehali.dev/projects/80b3ddd5-d6c4-415a-81f6-f3125419507b/files/000730a4-8459-49fa-b1b8-3b395049966d.jpg"
+            alt="Игрок Сибирских Снайперов"
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-background"></div>
